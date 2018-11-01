@@ -1,25 +1,29 @@
 <template>
   <card>
-    <h5 slot="header" class="title">Edit Profile</h5>
+    <h5 slot="header" class="title">Nova Sessão</h5>
     <div class="row">
       <div class="col-md-5 pr-md-1">
-        <base-input label="Company (disabled)"
-                  placeholder="Company"
+        <base-input label="Nome da Peça"
+                  placeholder="Ex. Nome da Peça"
                   v-model="model.company"
-                  disabled>
+                  >
         </base-input>
       </div>
       <div class="col-md-3 px-md-1">
-        <base-input label="Username"
-                  placeholder="Username"
+        <base-input label="Faixa Etária"
+                  placeholder="Ex: +18"
                   v-model="model.username">
         </base-input>
       </div>
       <div class="col-md-4 pl-md-1">
-        <base-input label="Email address"
-                  type="email"
-                  placeholder="mike@email.com">
-        </base-input>
+        <label class="control-label">Data</label>
+        <br>
+        <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+        <el-date-picker
+          v-model="model.data"
+          type="date"
+          placeholder="Pick a day">
+        </el-date-picker>
       </div>
     </div>
     <div class="row">
@@ -79,8 +83,24 @@
     <base-button slot="footer" type="primary" fill>Save</base-button>
   </card>
 </template>
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+
 <script>
+  
+  import {
+    DatePicker,
+    Select,
+    Option
+  } from 'element-ui'
+
+
   export default {
+    components: {
+
+      [DatePicker.name]: DatePicker,
+      [Option.name]: Option,
+      [Select.name]: Select
+    },
     props: {
       model: {
         type: Object,
