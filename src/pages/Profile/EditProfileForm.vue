@@ -16,13 +16,14 @@
         </base-input>
       </div>
       <div class="col-md-4 pl-md-1">
-        <label class="control-label">Data</label>
+        <label class="control-label">Data da Peça*</label>
         <br>
         <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
         <el-date-picker
           v-model="model.data"
           type="date"
-          placeholder="Pick a day">
+          placeholder="Pick a day"
+          format="DD/MM/yyyy">
         </el-date-picker>
       </div>
     </div>
