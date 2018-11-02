@@ -22,8 +22,8 @@ const routes = [
         component: Dashboard
       },
       {
-        path: "profile",
-        name: "profile",
+        path: "Cadastro de Sessões",
+        name: "Cadastro de Sessões",
         component: Profile
       },
       {
@@ -42,8 +42,8 @@ const routes = [
         component: Typography
       },
       {
-        path: "table-list",
-        name: "table-list",
+        path: "agenda",
+        name: "agenda",
         component: TableList
       }
     ]

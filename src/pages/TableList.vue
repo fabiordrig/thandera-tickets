@@ -3,81 +3,17 @@
       <div class="col-12">
         <card :title="table1.title">
           <div class="table-responsive">
-            <base-table :data="table1.data"
-                        :columns="table1.columns"
+            <base-table :data="tableData"
+                        :columns="tableColumns"
                         thead-classes="text-primary">
             </base-table>
           </div>
         </card>
       </div>
-
-      <div class="col-12">
-        <card class="card-plain">
-          <div class="table-full-width table-responsive">
-            <base-table :title="table2.title" :sub-title="table2.subTitle" :data="table2.data"
-                         :columns="table2.columns">
-
-            </base-table>
-          </div>
-        </card>
-      </div>
-
     </div>
 </template>
 <script>
 import { BaseTable } from "@/components";
-const tableColumns = ["Name", "Country", "City", "Salary"];
-const tableData = [
-  {
-    id: 1,
-    name: "Dakota Rice",
-    salary: "$36.738",
-    country: "Niger",
-    city: "Oud-Turnhout",
-  },
-  {
-    id: 2,
-    name: "Minerva Hooper",
-    salary: "$23,789",
-    country: "Curaçao",
-    city: "Sinaai-Waas"
-  },
-  {
-    id: 3,
-    name: "Sage Rodriguez",
-    salary: "$56,142",
-    country: "Netherlands",
-    city: "Baileux"
-  },
-  {
-    id: 4,
-    name: "Philip Chaney",
-    salary: "$38,735",
-    country: "Korea, South",
-    city: "Overland Park"
-  },
-  {
-    id: 5,
-    name: "Doris Greene",
-    salary: "$63,542",
-    country: "Malawi",
-    city: "Feldkirchen in Kärnten"
-  },
-  {
-    id: 6,
-    name: 'Mason Porter',
-    salary: '$98,615',
-    country: 'Chile',
-    city: 'Gloucester'
-  },
-  {
-    id: 7,
-    name: 'Jon Porter',
-    salary: '$78,615',
-    country: 'Portugal',
-    city: 'Gloucester'
-  }
-];
 
 export default {
   components: {
@@ -86,15 +22,67 @@ export default {
   data() {
     return {
       table1: {
-        title: "Simple Table",
-        columns: [...tableColumns],
-        data: [...tableData]
+        title: "Peças em cartaz",
       },
-      table2: {
-        title: "Table on Plain Background",
-        columns: [...tableColumns],
-        data: [...tableData]
-      }
+      tableColumns: ["nome", "data", "assentos", "horario", "Valor"],
+      tableData: [
+        {
+          id: 1,
+          nome: "Sonho de uma noite de verão",
+          valor: "R$ 36",
+          assentos: '50',
+          data: "03/11",
+          horario: '10h30',
+        },
+        {
+          id: 2,
+          nome: "O Lago dos Cisnes",
+          valor: "R$ 23",
+          assentos: '48',
+          data: "13/11",
+          horario: '11h30' 
+        },
+        {
+          id: 3,
+          nome: "Hairspray ",
+          valor: "R$ 56",
+          assentos: '30',
+          data: "27/11",
+          horario: '15h30'      
+        },
+        {
+          id: 4,
+          nome: "As Aventuras de João e Maria",
+          valor: "R$ 38",
+          assentos: '1',
+          data: "15/11",
+          horario: '16h50'
+        },
+        {
+          id: 5,
+          nome: "Porque os Homens Mentem?",
+          valor: "R$ 63",
+          assentos: '12',
+          data: "19/11",
+          horario: '20h00'
+        },
+        {
+          id: 6,
+          nome: 'A morte do caixeiro viajante',
+          valor: 'R$ 98',
+          assentos: '14',
+          data: '03/11',
+          horario: '21h30'        
+        },
+        {
+          id: 7,
+          nome: 'Ópera do malandro',
+          valor: 'R$ 78',
+          assentos: '4',
+          data: '05/11',
+          horario: '17h00'       
+        },
+      ]
     };
   }
 };

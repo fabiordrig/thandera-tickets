@@ -5,8 +5,7 @@
       <div class="col-md-5 pr-md-1">
         <base-input label="Nome da Peça"
                   placeholder="Ex. Nome da Peça"
-                  v-model="model.company"
-                  >
+                  v-model="model.company">
         </base-input>
       </div>
       <div class="col-md-3 px-md-1">
@@ -22,72 +21,45 @@
         <el-date-picker
           v-model="model.data"
           type="date"
-          placeholder="Pick a day"
+          placeholder="Escolha o dia da Peça"
           format="DD/MM/yyyy">
         </el-date-picker>
       </div>
     </div>
     <div class="row">
       <div class="col-md-6 pr-md-1">
-        <base-input label="First Name"
+        <base-input label="Valor da Entrada"
                   v-model="model.firstName"
-                  placeholder="First Name">
+                  placeholder="Ex. R$ 50,00">
         </base-input>
       </div>
       <div class="col-md-6 pl-md-1">
-        <base-input label="Last Name"
+        <base-input label="Capacidade Máxima"
                   v-model="model.lastName"
-                  placeholder="Last Name">
-        </base-input>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-12">
-        <base-input label="Address"
-                  v-model="model.address"
-                  placeholder="Home Address">
-        </base-input>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-4 pr-md-1">
-        <base-input label="City"
-                  v-model="model.city"
-                  placeholder="City">
-        </base-input>
-      </div>
-      <div class="col-md-4 px-md-1">
-        <base-input label="Country"
-                  v-model="model.country"
-                  placeholder="Country">
-        </base-input>
-      </div>
-      <div class="col-md-4 pl-md-1">
-        <base-input label="Postal Code"
-                  placeholder="ZIP Code">
+                  placeholder="Ex. 50 pessoas">
         </base-input>
       </div>
     </div>
     <div class="row">
       <div class="col-md-8">
         <base-input>
-          <label>About Me</label>
+          <label>Sinopse da Peça</label>
           <textarea rows="4" cols="80"
                     class="form-control"
-                    placeholder="Here can be your description"
+                    placeholder="Faça um resumo da nova Peça"
                     v-model="model.about">
 
               </textarea>
         </base-input>
       </div>
     </div>
-    <base-button slot="footer" type="primary" fill>Save</base-button>
+    <base-button slot="footer" type="primary" @click="rota" fill>Salvar</base-button>
   </card>
 </template>
 <script src="https://unpkg.com/element-ui/lib/index.js"></script>
 
 <script>
-  
+  import { BaseAlert } from '@/components';
   import {
     DatePicker,
     Select,
@@ -109,6 +81,12 @@
           return {};
         }
       }
+    },
+    methods:{
+      rota () {
+        alert('Peça salva com sucesso!')
+        this.$router.push('dashboard')
+      },
     }
   }
 </script>

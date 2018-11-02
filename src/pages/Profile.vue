@@ -1,7 +1,7 @@
 <template>
   <div class="row">
     <div class="col-md-12">
-      <user-card :user="user"></user-card>
+      <user-card :user="user" style="height:250px"></user-card>
     </div>
     <div class="col-md-12">
       <edit-profile-form :model="model">
