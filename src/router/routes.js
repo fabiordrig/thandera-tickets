@@ -9,6 +9,7 @@ import Notifications from "@/pages/Notifications.vue";
 import Icons from "@/pages/Icons.vue";
 import Typography from "@/pages/Typography.vue";
 import TableList from "@/pages/TableList.vue";
+import Help from "@/pages/Help.vue";
 
 const routes = [
   {
@@ -45,6 +46,11 @@ const routes = [
         path: "agenda",
         name: "agenda",
         component: TableList
+      },
+      {
+        path: "help",
+        name: "help",
+        component: Help
       }
     ]
   },

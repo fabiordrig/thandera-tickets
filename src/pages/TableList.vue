@@ -9,6 +9,7 @@
             </base-table>
           </div>
         </card>
+        <base-button slot="footer" type="primary" @click="rota" fill>Editar uma peça</base-button>
       </div>
     </div>
 </template>
@@ -83,7 +84,12 @@ export default {
           horario: '17h00'       
         },
       ]
-    };
+    }
+  },
+  methods: {
+    rota () {
+      this.$router.push('Cadastro de Sessões')
+    }
   }
 };
 </script>

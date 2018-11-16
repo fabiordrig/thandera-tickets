@@ -48,7 +48,6 @@
                     class="form-control"
                     placeholder="Faça um resumo da nova Peça"
                     v-model="model.about">
-
               </textarea>
         </base-input>
       </div>
@@ -84,7 +83,11 @@
     },
     methods:{
       rota () {
-        alert('Peça salva com sucesso!')
+        this.$notify({
+          group: 'foo',
+          title: 'Peça salva com sucesso!',
+          text: 'Hello user! This is a notification!'
+        })
         this.$router.push('dashboard')
       },
     }

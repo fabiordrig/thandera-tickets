@@ -5,8 +5,8 @@
         <sidebar-link to="/dashboard" :name="$t('sidebar.dashboard')" icon="tim-icons icon-chart-pie-36"/>
         <sidebar-link to="/Cadastro de Sessões" :name="'Cadastro de Sessões'" icon="tim-icons icon-single-02"/>
         <sidebar-link to="/agenda" :name="'Agenda'" icon="tim-icons icon-puzzle-10"/>
-        <!--<<sidebar-link to="/typography" :name="'Consulta de Assentos'" icon="tim-icons icon-align-center"/>
-        <sidebar-link to="/icons" :name="$t('sidebar.icons')" icon="tim-icons icon-atom"/>
+        <sidebar-link to="/help" :name="'Suporte'" icon="tim-icons icon-chat-33"/>
+        <!--<<sidebar-link to="/icons" :name="$t('sidebar.icons')" icon="tim-icons icon-atom"/>
         <sidebar-link to="/notifications" :name="$t('sidebar.notifications')" icon="tim-icons icon-bell-55"/>-->
       </template>
     </side-bar>
