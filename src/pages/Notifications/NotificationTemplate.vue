@@ -1,5 +1,5 @@
 <template>
-  <div>Welcome to <b>Black Dashboard</b> - a beautiful freebie for every web developer.</div>
+  <div>Usuário ou senha incorretos, favor verificar as informações digitadas ou entre em contato com o suporte</div>
 </template>
 
 <script>
